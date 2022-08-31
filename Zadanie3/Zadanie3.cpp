@@ -3,37 +3,52 @@
 #include<algorithm>
 #include <iostream>
 
-std::string StringConverter::toCamelCase(std::string)
+std::string StringConverter::toCamelCase(std::string snakeString)
 {
-	char c;
-	char d;
-	std::string stringToConvert;
-	std::vector<char> vec(stringToConvert.begin(),stringToConvert.end());
-	
-	
-	for (int i = 0; i < vec.size(); ++i)
+
+	std::string stringToReturn;
+	for (auto it = snakeString.begin(); it != snakeString.end(); ++it)
 	{
-		c = vec.at(i);
-		d ='_'+( vec.at(i) + 32);
-		if (c >= 65 && c <= 90)
+		if (*it =='_')
 		{
-			std::replace(vec.begin(), vec.end(), c, d);
+			it++;
+			stringToReturn.push_back(toupper(*it));
 		}
-
-		
+		else
+		{
+			stringToReturn.push_back(*it);
+		}
 	}
-	std::string stringToReturn(vec.begin(), vec.end());
-	
+
 	return stringToReturn;
-	
+
 }
 
 
-int main()
+
+
+
+
+std::string StringConverter::toSnakeCase(std::string camelString)
 {
-	StringConverter word1;
-	std::string str = { "camelCase" };
-	std::cout << word1.toCamelCase(str);
+
 	
+	std::string stringToReturn;
+	for (auto it = camelString.begin(); it != camelString.end(); ++it)
+	{
+		if (*it >= 65 && *it <= 90)
+		{
+			stringToReturn.push_back('_');
+			stringToReturn.push_back(tolower( * it));
+		}
+		else
+		{
+			stringToReturn.push_back(*it);
+		}
+	}
+
+	return stringToReturn;
+
 }
+
 
