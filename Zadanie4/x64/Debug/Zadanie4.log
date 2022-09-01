@@ -1,12 +1,14 @@
-﻿  main.cpp
-  Zadanie4.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(233,9): error C2064: term does not evaluate to a function taking 1 arguments
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(228,1): message : class does not define an 'operator()' or a user defined conversion operator to a pointer-to-function or reference-to-function that takes appropriate number of arguments
-D:\SDA\ZAAWANSOWANY\Zadanie4\Zadanie4.cpp(9): message : see reference to function template instantiation '_Fn std::for_each<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,KlasaMorseCodeTranslator::toMorseCode::<lambda_1>>(_InIt,_InIt,_Fn)' being compiled
+﻿  Zadanie4.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(233,9): error C2664: '_Ty2 KlasaMorseCodeTranslator::toMorseCode::<lambda_1>::operator ()(char) const': cannot convert argument 1 from 'std::pair<const char,std::string>' to 'char'
+          with
+          [
+              _Ty2=std::string
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(233,15): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+D:\SDA\ZAAWANSOWANY\Zadanie4\Zadanie4.cpp(26,84): message : see declaration of 'KlasaMorseCodeTranslator::toMorseCode::<lambda_1>::operator ()'
+D:\SDA\ZAAWANSOWANY\Zadanie4\Zadanie4.cpp(31): message : see reference to function template instantiation '_Fn std::for_each<std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const char,std::string>>>>,KlasaMorseCodeTranslator::toMorseCode::<lambda_1>>(_InIt,_InIt,_Fn)' being compiled
           with
           [
               _Fn=KlasaMorseCodeTranslator::toMorseCode::<lambda_1>,
-              _Elem=char,
-              _InIt=std::_String_iterator<std::_String_val<std::_Simple_types<char>>>
+              _InIt=std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const char,std::string>>>>
           ]
-  Generating Code...

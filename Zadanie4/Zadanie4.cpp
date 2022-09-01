@@ -6,21 +6,28 @@
 
 #include "Zadanie4.hpp"
 #include<algorithm>
-#include<vector>
+#include<map>
 #include<iostream>
 #include<string>
 
 std::string KlasaMorseCodeTranslator::toMorseCode(std::string latinString)
 {
-    std::vector<MorseLatinLetters> alfabet = { { 'a',".- "},{ 'b',"-..." },{'c',"-.-."},{'d',"-.."},{'e',"."} };
+    std::map<char, std::string> alfabetMorse = { { 'a',".- "},{ 'b',"-..." },{'c',"-.-."},{'d',"-.."},{'e',"."} };
+
+    std::map< std::string, char> alfabetLatin;
+
+
     std::string stringToReturn;
     
     for (const auto i : latinString)
     {
-
-        for_each(alfabet.begin(), alfabet.end(), [](MorseLatinLetters) {  stringToReturn +=  });
-
-       
+      
+        
+        for_each(alfabetMorse.begin(), alfabetMorse.end(), [&alfabetMorse](char x) { auto it = alfabetMorse.find(x); return it->second;
+        
+            });
+        
+      
     }
     return stringToReturn;
 }

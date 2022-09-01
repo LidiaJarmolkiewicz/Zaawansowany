@@ -1,4 +1,5 @@
 #pragma once
+
 #include<string>
 #include<map>
 class KlasaMorseCodeTranslator
@@ -10,12 +11,9 @@ public:
 	
 };
 		
-		
-//
-//	std::vector<LatinMorseLetter> LatinMorseDictioniary
-//		struct LatinMorseLetter
-//	{
-//		char latin;
-//		std::string morse;
-//
-//};
+struct MorseLatinLetters
+{
+	char latin;
+	std::string morse;
+
+};
