@@ -52,11 +52,13 @@ int main()
 	std::cout << "lista liczb niepierwszych" << std::endl;
 
 	
+	auto NotInPrimList = [&listOfPrims](int i) {return  listOfPrims.end() ==  std::find(listOfPrims.begin(), listOfPrims.end(), i); };
 	
-	listOfNoPrims.erase(std::remove(listOfNoPrims.begin(), listOfNoPrims.end(),listOfPrims), listOfNoPrims.end());
+	listOfNoPrims.erase(std::remove_if(listOfNoPrims.begin(), listOfNoPrims.end(),NotInPrimList), listOfNoPrims.end());
 	for (const auto& e : listOfNoPrims)
 	{
 
 		std::cout << e << " ";
 	};
+	
 }
