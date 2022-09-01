@@ -1,0 +1,12 @@
+﻿  main.cpp
+  Zadanie4.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(233,9): error C2064: term does not evaluate to a function taking 1 arguments
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(228,1): message : class does not define an 'operator()' or a user defined conversion operator to a pointer-to-function or reference-to-function that takes appropriate number of arguments
+D:\SDA\ZAAWANSOWANY\Zadanie4\Zadanie4.cpp(9): message : see reference to function template instantiation '_Fn std::for_each<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,KlasaMorseCodeTranslator::toMorseCode::<lambda_1>>(_InIt,_InIt,_Fn)' being compiled
+          with
+          [
+              _Fn=KlasaMorseCodeTranslator::toMorseCode::<lambda_1>,
+              _Elem=char,
+              _InIt=std::_String_iterator<std::_String_val<std::_Simple_types<char>>>
+          ]
+  Generating Code...
