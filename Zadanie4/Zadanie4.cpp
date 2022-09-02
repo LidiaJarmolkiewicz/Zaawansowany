@@ -12,32 +12,50 @@
 
 std::string KlasaMorseCodeTranslator::toMorseCode(std::string latinString)
 {
-    std::map<char, std::string> alfabetMorse = { { 'a',".- "},{ 'b',"-..." },{'c',"-.-."},{'d',"-.."},{'e',"."} };
-
-    std::map< std::string, char> alfabetLatin;
-
 
     std::string stringToReturn;
     
     for (const auto i : latinString)
     {
-      
-        
-        for_each(alfabetMorse.begin(), alfabetMorse.end(), [&alfabetMorse](char x) { auto it = alfabetMorse.find(x); return it->second;
-        
-            });
-        
-      
+        //stringToReturn += alfabetMorse[i] + ' ';
+        stringToReturn += alfabetMorse.at(i) + ' ';
     }
+    return stringToReturn;
+}
+
+std::string KlasaMorseCodeTranslator::fromMorseCode(std::string morseString)
+{
+   
+    std::string stringToReturn={};
+    std::string s;
+
+    auto lambda = [&](char x) {
+        
+            if (x != ' ')
+            {
+                s += x;
+            }
+            else if (x == ' ')
+            {
+                s = alfabetLatin.at(morseString);
+                stringToReturn += s;
+                
+            }
+          
+            
+       
+    };
+    std::for_each(morseString.begin(), morseString.end(), lambda);
+    
     return stringToReturn;
 }
 
     int main()
     {
         KlasaMorseCodeTranslator word;
-        std::cout << word.fromMorseCode("abc");
+        std::cout << word.toMorseCode("abcd")<<std::endl;
+        std::cout << word.fromMorseCode("-.. -.-. -... ");
     }
 
 
-    /*char latin;
-    std::string morse;*/
+    
