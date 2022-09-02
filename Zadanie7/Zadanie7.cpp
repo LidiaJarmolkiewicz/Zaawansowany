@@ -9,8 +9,7 @@ std::vector<int> generateNumbers(std::vector<int>)
     std::random_device rd;
     std::default_random_engine eng(rd());
     std::uniform_int_distribution <int>distribution(1, 100);
-    //return distribution(eng);
-
+    
     std::vector<int> listOf50;
 
     for (int i = 0; i < 50; ++i)
@@ -55,8 +54,6 @@ std::vector<int> createSortedList(std::vector<int>)
 
 int main()
 {
-    //rintList(generateNumbers());
-   
     std::vector<int>sortedList;
     
     printList(generateNumbers(sortedList));
