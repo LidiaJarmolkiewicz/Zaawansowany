@@ -22,6 +22,6 @@ int Rectangle::getArea()
 
 bool Rectangle::isSquare()
 {
-    if(getSideA() == getSideA())
-    return true;
+    return (getSideA() == getSideB());
+   
 }

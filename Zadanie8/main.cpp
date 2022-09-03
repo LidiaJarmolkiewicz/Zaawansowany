@@ -7,12 +7,14 @@ int main()
 {
     RectangleManager rectangles(100);
     rectangles.printRectangles();
-    std::cout << "_____" << std::endl;
+    std::cout << "_____ "<< std::endl;
     rectangles.countRectangleBiggerThen(50);
-    std::cout << "_____" << std::endl;
+    std::cout << "_____ ile jest kwadratow"  <<std::endl;
     rectangles.copyRectangles();
-    rectangles.printRectangles();
-    std::cout << "_____" << std::endl;
-
-    std::cout << "Hello World!\n";
+   
+    std::cout << "_____pola malejaco" <<std::endl;
+    rectangles.sortAreaDescending();
+  
+    std::cout << "_____ prostokaty bez zera"  <<  std::endl;
+    rectangles.deleteInvalid();
 }

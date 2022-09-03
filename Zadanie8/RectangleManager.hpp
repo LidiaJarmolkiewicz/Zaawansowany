@@ -11,7 +11,8 @@ public:
 	void printRectangles();
 	size_t countRectangleBiggerThen(int area);
 	std::vector<Rectangle> copyRectangles();
-	void sortAreaDescending();
+	std::vector<Rectangle> sortAreaDescending();
+	std::vector<Rectangle> deleteInvalid();
 private:	
 	std::vector<Rectangle> vecOfRectangles;
 };
