@@ -1,2 +1,21 @@
 ﻿  RectangleManager.cpp
-D:\SDA\ZAAWANSOWANY\Zadanie8\RectangleManager.cpp(22,58): error C2065: 'printSide': undeclared identifier
+D:\SDA\ZAAWANSOWANY\Zadanie8\RectangleManager.cpp(38,14): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(1359,23): error C2440: '=': cannot convert from 'Rectangle' to 'int'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(1359,23): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+D:\SDA\ZAAWANSOWANY\Zadanie8\RectangleManager.cpp(47): message : see reference to function template instantiation '_OutIt std::copy_if<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<int>>>,RectangleManager::copyRectangles::<lambda_1>>(_InIt,_InIt,_OutIt,_Pr)' being compiled
+          with
+          [
+              _OutIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<int>>>,
+              _Ty=Rectangle,
+              _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<Rectangle>>>,
+              _Pr=RectangleManager::copyRectangles::<lambda_1>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(233,15): error C2664: 'bool (Rectangle)': cannot convert argument 1 from 'int' to 'Rectangle'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(228,1): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+D:\SDA\ZAAWANSOWANY\Zadanie8\RectangleManager.cpp(48): message : see reference to function template instantiation '_Fn (__cdecl *std::for_each<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,bool(__cdecl *)(Rectangle)>(_InIt,_InIt,_Fn))(Rectangle)' being compiled
+          with
+          [
+              _Fn=bool (__cdecl *)(Rectangle),
+              _Ty=int,
+              _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<int>>>
+          ]
