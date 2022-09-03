@@ -10,7 +10,8 @@ public:
 	RectangleManager(int howMany);
 	void printRectangles();
 	size_t countRectangleBiggerThen(int area);
-	std::vector<int> copyRectangles();
+	std::vector<Rectangle> copyRectangles();
+	void sortAreaDescending();
 private:	
 	std::vector<Rectangle> vecOfRectangles;
 };

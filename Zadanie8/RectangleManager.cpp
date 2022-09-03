@@ -15,10 +15,10 @@ RectangleManager::RectangleManager(int howMany)
 	}
 	
 }
-bool printSide(Rectangle rect)
+void printSide(Rectangle rect)
 {
 	std::cout << rect.getSideA() << "," << rect.getSideB() << std::endl;
-	return true;
+	
 }
 void RectangleManager::printRectangles()
 {
@@ -41,13 +41,19 @@ size_t RectangleManager::countRectangleBiggerThen(int area)
 	return size_t();
 }
 
-std::vector<int> RectangleManager::copyRectangles()
+std::vector<Rectangle> RectangleManager::copyRectangles()
 {
-	std::vector<int> vecOfSquares;
-	std::copy_if(vecOfRectangles.begin(), vecOfRectangles.end(), vecOfSquares.begin(), [&](Rectangle rect) {return rect.isSquare(); });
+	std::vector<Rectangle> vecOfSquares;
+	vecOfSquares = vecOfRectangles;
+	std::copy_if(vecOfRectangles.begin(), vecOfRectangles.end(), vecOfSquares.begin(), [](Rectangle rect) {return rect.isSquare(); });
 	for_each(vecOfSquares.begin(), vecOfSquares.end(), printSide);
-
 	return vecOfSquares;
 }
+	
+
+//void RectangleManager::sortAreaDescending()
+//{
+//	std::sort(vecOfRectangles.begin(), vecOfRectangles.end(), );
+//}
 
 

@@ -15,8 +15,13 @@ int Rectangle::getSideB()
     return _b;
 }
 
+int Rectangle::getArea()
+{
+    return countArea();
+}
+
 bool Rectangle::isSquare()
 {
-    if(_a == _b)
+    if(getSideA() == getSideA())
     return true;
 }

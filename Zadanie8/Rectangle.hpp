@@ -5,6 +5,7 @@ class Rectangle
 	int countArea();
 	int getSideA();
 	int getSideB();
+	int getArea();
 	bool isSquare();
 
 private:
