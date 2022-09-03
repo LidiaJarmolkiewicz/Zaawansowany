@@ -1,7 +1,9 @@
 #include "RectangleManager.hpp"
+#include"RectangleGenerator.hpp"
 #include"Rectangle.hpp"
 #include<vector>
 #include<algorithm>
+#include<iostream>
 
 RectangleManager::RectangleManager(int howMany)
 {
@@ -13,3 +15,16 @@ RectangleManager::RectangleManager(int howMany)
 	}
 	
 }
+
+void RectangleManager::printRectangles()
+{
+
+	for_each(vecOfRectangles.begin(), vecOfRectangles.end(),printSide);
+	
+}
+bool printSide(Rectangle rect)
+{
+	std::cout << rect.getSideA() << "," << rect.getSideB() << std::endl;
+	return true;
+}
+

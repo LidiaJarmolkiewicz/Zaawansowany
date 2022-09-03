@@ -1,4 +1,2 @@
-﻿  RectangleGenerator.cpp
-  RectangleManager.cpp
-  Generating Code...
-  Zadanie8.vcxproj -> D:\SDA\Testy\TESTY\x64\Debug\Zadanie8.exe
+﻿  RectangleManager.cpp
+D:\SDA\ZAAWANSOWANY\Zadanie8\RectangleManager.cpp(22,58): error C2065: 'printSide': undeclared identifier
