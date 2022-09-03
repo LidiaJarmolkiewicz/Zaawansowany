@@ -4,7 +4,7 @@
 #include<numeric>
 #include<random>
 
-std::vector<int> generateNumbers(std::vector<int>)
+std::vector<int> generateNumbers()
 {
     std::random_device rd;
     std::default_random_engine eng(rd());
@@ -31,7 +31,7 @@ std::vector<int> createSortedList(std::vector<int>)
     std::vector<int> listOfOdd;
     std::vector<int> list2;
     std::vector<int> list;
-   list= generateNumbers(list2);
+   list= generateNumbers();
     for( auto it=list.begin(); it!=list.end(); ++it)
     {              
         if (*it % 2 == 0)
@@ -46,9 +46,11 @@ std::vector<int> createSortedList(std::vector<int>)
     std::sort(listOfEven.begin(), listOfEven.end());
     std::sort(listOfOdd.begin(), listOfOdd.end(), std::greater<int>());
 
-    auto it = listOfEven.end();
-    listOfEven.insert(it, listOfOdd.begin(), listOfOdd.end());
-    return listOfEven;
+   
+    std::copy(listOfEven.begin(), listOfEven.end(), std::back_inserter(list2));
+    std::copy(listOfOdd.begin(), listOfOdd.end(), std::back_inserter(list2));
+
+    return list2;
 };
 
 
@@ -56,7 +58,7 @@ int main()
 {
     std::vector<int>sortedList;
     
-    printList(generateNumbers(sortedList));
+    printList(generateNumbers());
     std::cout <<"____"<< std::endl;
   
     printList(createSortedList(sortedList));
