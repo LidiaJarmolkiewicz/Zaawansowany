@@ -8,7 +8,7 @@
 RectangleManager::RectangleManager(int howMany)
 {
 	
-	RectangleGenerator rectGen(0, 10);
+	RectangleGenerator rectGen;
 	for (int i = 0; i < howMany; ++i)
 	{
 		vecOfRectangles.push_back(rectGen.generateRandomRectangle());
@@ -24,7 +24,7 @@ void RectangleManager::printRectangles()
 {
 
 	for_each(vecOfRectangles.begin(), vecOfRectangles.end(),printSide);
-	
+	std::cout << std::endl;
 }
 
 size_t RectangleManager::countRectangleBiggerThen(int area)
@@ -47,6 +47,8 @@ std::vector<Rectangle> RectangleManager::copyRectangles()
 
 	std::copy_if(vecOfRectangles.begin(), vecOfRectangles.end(), std::back_inserter(vecOfSquares), [&](Rectangle rect) {return rect.isSquare(); });
 	for_each(vecOfSquares.begin(), vecOfSquares.end(), printSide);
+	std::cout << std::endl;
+
 	return vecOfSquares;
 }
 	
@@ -55,6 +57,8 @@ std::vector<Rectangle> RectangleManager::sortAreaDescending()
 {
 	std::sort(vecOfRectangles.begin(), vecOfRectangles.end(), [](Rectangle rec1, Rectangle rec2) {return(rec1.getArea()> rec2.getArea());});
 	for_each(vecOfRectangles.begin(), vecOfRectangles.end(), printSide);
+	std::cout << std::endl;
+
 	return vecOfRectangles;
 }
 

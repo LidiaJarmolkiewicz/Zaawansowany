@@ -1,5 +1,2 @@
-﻿  RectangleManager.cpp
-D:\SDA\ZAAWANSOWANY\Zadanie8\RectangleManager.cpp(38,14): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
-  main.cpp
-  Generating Code...
-  Zadanie8.vcxproj -> D:\SDA\Testy\TESTY\x64\Debug\Zadanie8.exe
+﻿  RectangleGenerator.cpp
+  Zadanie8.vcxproj -> D:\SDA\ZAAWANSOWANY\x64\Debug\Zadanie8.exe
