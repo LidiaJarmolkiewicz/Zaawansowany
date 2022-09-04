@@ -2,18 +2,18 @@
 #include"GuessTheNumber.hpp"
 #include<random>
 #include<iostream>
+
 int GuessTheNumber::generateNumber()
 {
     std::random_device rd;
     std::default_random_engine eng(rd());
     std::uniform_int_distribution <int> distr(1, 100);
-    int number = distr(eng);
-    return number;
+    return distr(eng);
 }
 
 bool GuessTheNumber::guessNumber(int numberOfAttempts)
 {
-    int numberToGuess = generateNumber();
+    numberToGuess = generateNumber();
     
     int x = 0;
     for (int i = 1; i <= +numberOfAttempts; ++i)
@@ -23,18 +23,12 @@ bool GuessTheNumber::guessNumber(int numberOfAttempts)
         if (x < numberToGuess)
         {
             std::cout << "podana liczba jest za mala, pozostalo ci "<< (numberOfAttempts-i)<<" prob" << std::endl;
-            if (x > (numberToGuess - 3))
-            {
-                std::cout << "jestes blisko zgadywanej liczby " << std::endl;
-            }
+            isClose(x);
         }
         else if (x > numberToGuess)
         {
             std::cout << "podana liczba jest za duza, pozostalo ci "<< (numberOfAttempts-i)<<" prob" << std::endl;
-            if (x < (numberToGuess + 3))
-            {
-                std::cout << "jestes blisko zgadywanej liczby " << std::endl;
-            }
+            isClose(x);
         }
         else
         {
@@ -43,4 +37,14 @@ bool GuessTheNumber::guessNumber(int numberOfAttempts)
         }
     }
    
+}
+
+void GuessTheNumber::isClose(int x)
+{
+    if( (x<numberToGuess) && (x > (numberToGuess - 3))||(x>numberToGuess) &&( x < (numberToGuess + 3)))
+    {
+        std::cout << "jestes blisko zgadywanej liczby " << std::endl;
+    }
+
+    
 }

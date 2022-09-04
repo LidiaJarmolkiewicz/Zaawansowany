@@ -4,4 +4,5 @@ int main()
 {
     GuessTheNumber guess;
     guess.guessNumber(10);
+   
 }
