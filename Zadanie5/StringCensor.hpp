@@ -5,7 +5,10 @@
 class StringCensor
 {
 public:
-    std::set<char> addCensoredLetter(char c);
+    void addCensoredLetter(char );
     std::string censor(std::string);
 
+    std::set<char> CensorSet;
+private:
+   
 };

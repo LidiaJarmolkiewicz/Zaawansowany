@@ -10,19 +10,21 @@
 #include<vector>
 #include<set>
 #include"StringCensor.hpp"
-//std::set<char> StringCensor::addCensoredLetter(char c)
-//{
-//    std::set<char> listOfChar;
-//    listOfChar={'a','z'};
-//    return listOfChar;
-//   
-//}
-std::string StringCensor::censor(std::string stringToCensor)
+void StringCensor::addCensoredLetter(char c)
 {
-    char c='z';
-  
-    std::replace(stringToCensor.begin(), stringToCensor.end(),c, '*');
-    
+    CensorSet.insert(c);
+      
+}
+
+std::string StringCensor::censor(std::string stringToCensor)
+{ 
+    auto lambda = [=](char &x) {
+        if (CensorSet.find(x) != CensorSet.end())
+        {
+            x = '*';
+        }    
+    };
+    std::for_each(stringToCensor.begin(), stringToCensor.end(), lambda);
 
     return stringToCensor;
 }
@@ -31,6 +33,8 @@ int main()
 {
     
     StringCensor str;
-    std::cout << str.censor("sgtdyzn");
+    str.addCensoredLetter('k');
+    str.addCensoredLetter('y');
+    std::cout << str.censor("krokodyl");
    
 }
