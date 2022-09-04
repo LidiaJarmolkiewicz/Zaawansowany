@@ -28,21 +28,20 @@ std::string KlasaMorseCodeTranslator::fromMorseCode(std::string morseString)
    
     std::string stringToReturn={};
     std::string s;
-
+   
     auto lambda = [&](char x) {
         
             if (x != ' ')
             {
                 s += x;
             }
-            else if (x == ' ')
+            else
             {
-                s = alfabetLatin.at(morseString);
+                s = alfabetLatin.at(s);
                 stringToReturn += s;
-                
+                s = "";
             }
-          
-            
+           
        
     };
     std::for_each(morseString.begin(), morseString.end(), lambda);
@@ -50,12 +49,11 @@ std::string KlasaMorseCodeTranslator::fromMorseCode(std::string morseString)
     return stringToReturn;
 }
 
-    int main()
-    {
-        KlasaMorseCodeTranslator word;
-        std::cout << word.toMorseCode("abcd")<<std::endl;
-        std::cout << word.fromMorseCode("-.. -.-. -... ");
-    }
+int main()
+{
+    KlasaMorseCodeTranslator word;
+    std::cout << word.toMorseCode("abcd") << std::endl;
+    std::cout << word.fromMorseCode("-.. -.-. -... ");
+}
 
 
-    
