@@ -12,22 +12,25 @@
 #include"StringCensor.hpp"
 void StringCensor::addCensoredLetter(char c)
 {
-    CensorSet.insert(c);
+    censorSet.insert(c);
       
 }
 
 std::string StringCensor::censor(std::string stringToCensor)
-{ 
-    auto lambda = [=](char &x) {
-        if (CensorSet.find(x) != CensorSet.end())
+{
+     
+        auto lambda = [&](char& c)
         {
-            x = '*';
-        }    
-    };
-    std::for_each(stringToCensor.begin(), stringToCensor.end(), lambda);
+            for_each(censorSet.begin(), censorSet.end(), [&](char x) { if (c==x) { c = '*'; }});
+        };
+
+        for_each(stringToCensor.begin(), stringToCensor.end(),  lambda);
+  
+
 
     return stringToCensor;
-}
+};
+
 
 int main()
 {

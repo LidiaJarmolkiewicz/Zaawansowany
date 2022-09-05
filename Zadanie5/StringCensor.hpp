@@ -8,7 +8,7 @@ public:
     void addCensoredLetter(char );
     std::string censor(std::string);
 
-    std::set<char> CensorSet;
+    std::set<char> censorSet;
 private:
    
 };
