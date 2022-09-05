@@ -1,5 +1,5 @@
 ﻿  GuessTheNumber.cpp
   main.cpp
   Generating Code...
-D:\SDA\ZAAWANSOWANY\Zadanie 13\GuessTheNumber.cpp(40): warning C4715: 'GuessTheNumber::guessNumber': not all control paths return a value
+D:\SDA\ZAAWANSOWANY\Zadanie 13\GuessTheNumber.cpp(43): warning C4715: 'GuessTheNumber::guessNumber': not all control paths return a value
   Zadanie 13.vcxproj -> D:\SDA\ZAAWANSOWANY\x64\Debug\Zadanie 13.exe

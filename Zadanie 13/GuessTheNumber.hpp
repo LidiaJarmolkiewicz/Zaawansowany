@@ -7,6 +7,7 @@ class GuessTheNumber
 	bool guessNumber(int);
 	void isClose(int);
 	int numberToGuess=0 ;
+	
 private:
 };
 

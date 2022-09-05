@@ -16,8 +16,9 @@ bool GuessTheNumber::guessNumber(int numberOfAttempts)
     numberToGuess = generateNumber();
     
     int x = 0;
-    for (int i = 1; i <= +numberOfAttempts; ++i)
+    for (int i = 1; i <= numberOfAttempts; ++i)
     {
+       
         std::cout << "podaj liczbe " << std::endl;
         std::cin >> x;
         if (x < numberToGuess)
@@ -35,7 +36,9 @@ bool GuessTheNumber::guessNumber(int numberOfAttempts)
             std::cout << "bingo! " << std::endl;
             return 0;
         }
+        
     }
+    std::cout << "to by³a Twoja ostatnia proba !" << std::endl;
    
 }
 
@@ -48,3 +51,4 @@ void GuessTheNumber::isClose(int x)
 
     
 }
+
