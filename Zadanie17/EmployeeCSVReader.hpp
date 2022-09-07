@@ -1,10 +1,10 @@
-#pragma
-#include"IEmploeeFileReader.hpp"
-
-class EmployeeCSVReader : public IEmploeeFileReader
+#pragma once
+#include"IEmployeeFileReader.hpp"
+class EmployeeCSVReader :public IEmployeeFileReader
 {
 public:
-	virtual std::vector<Employee> readEmployees(std::string filePath) = 0;
+	 std::vector<Employee> readEmployees(std::string filePath) override;
+
 private:
-	//pola do obs³ugi pilow
+	//std::shared_ptr<IEmployeeFileReader> _fileReader;
 };
