@@ -8,9 +8,14 @@ class EmployeeManager
 {
 public:
 	EmployeeManager(std::shared_ptr<IEmployeeFileReader> fileReader, std::shared_ptr<IEmployeeFileWriter> fileWriter):_fileReader(fileReader),_fileWriter(fileWriter){};
-	virtual ~EmployeeManager();
+	//virtual ~EmployeeManager();
 
 	void readDataFromFile(std::string filePath);
+	//std::string generateLogin();
+	//std::string generatePassword();
+	// 
+	// 
+	// 
 	//a) generateLogins
 	//b) generate passwords
 	//b) storeLoginDataToFile

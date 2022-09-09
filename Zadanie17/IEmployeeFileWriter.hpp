@@ -7,7 +7,5 @@ class IEmployeeFileWriter
 public:
 	virtual void writeEmployees(std::vector<Employee> employees, std::string filePath) = 0;
 
-private:
-	//std::shared_ptr<IEmployeeFileWriter> _fileWriter;
 };
 

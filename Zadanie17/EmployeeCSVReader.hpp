@@ -6,5 +6,5 @@ public:
 	 std::vector<Employee> readEmployees(std::string filePath) override;
 
 private:
-	//std::shared_ptr<IEmployeeFileReader> _fileReader;
+	//pola do obslugi plikow
 };

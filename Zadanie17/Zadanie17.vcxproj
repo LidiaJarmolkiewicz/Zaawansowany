@@ -127,16 +127,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Employee.cpp" />
     <ClCompile Include="EmployeeCSVReader.cpp" />
     <ClCompile Include="EmployeeCSVWriter.cpp" />
+    <ClCompile Include="EmployeeGenerator.cpp" />
+    <ClCompile Include="EmployeeJSON.cpp" />
     <ClCompile Include="EmployeeManager.cpp" />
+    <ClCompile Include="GenerateLogin.cpp" />
+    <ClCompile Include="GeneratePassword.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Employee.hpp" />
     <ClInclude Include="EmployeeCSVReader.hpp" />
     <ClInclude Include="EmployeeCSVWriter.hpp" />
+    <ClInclude Include="EmployeeGenerator.hpp" />
+    <ClInclude Include="EmployeeJSON.hpp" />
     <ClInclude Include="EmployeeManager.hpp" />
+    <ClInclude Include="GenerateLogin.hpp" />
+    <ClInclude Include="GeneratePassword.hpp" />
     <ClInclude Include="IEmployeeFileReader.hpp" />
     <ClInclude Include="IEmployeeFileWriter.hpp" />
   </ItemGroup>
