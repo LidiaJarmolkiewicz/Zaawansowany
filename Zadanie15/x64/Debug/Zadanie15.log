@@ -1,2 +1,4 @@
-﻿  main.cpp
+﻿  Coin.cpp
+D:\SDA\ZAAWANSOWANY\Zadanie15\Coin.cpp(52,13): warning C4244: 'initializing': conversion from '__int64' to 'double', possible loss of data
+D:\SDA\ZAAWANSOWANY\Zadanie15\Coin.cpp(53,13): warning C4244: 'initializing': conversion from '__int64' to 'double', possible loss of data
   Zadanie15.vcxproj -> D:\SDA\ZAAWANSOWANY\Zadanie15\x64\Debug\Zadanie15.exe

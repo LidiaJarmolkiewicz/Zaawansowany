@@ -49,14 +49,85 @@ side Coin::generateThrow()
 
 void Coin::howManyOR()
 {
-   
-    double o = count(vec.begin(), vec.end(), side::O);
+   double o = count(vec.begin(), vec.end(), side::O);
    double r = count(vec.begin(), vec.end(), side::R);
    double oPercent = o / _howMany * 100;
    double rPercent = r / _howMany * 100;
    std::cout << "liczba orlow = " << o<< " a udzial procentowy wynosi = "<< oPercent<<" %"<<std::endl;
    std::cout << "liczba reszek = " << r << " a udzial procentowy wynosi = " << rPercent <<" %"<< std::endl;
+ }
 
+void Coin::statictic()
+{
+    int maxR = 0;
+    int countR=0;
+    int posR = 0;
+    int maxO = 0;
+    int countO = 0;
+    int posO = 0;
+    for (int i=0; i <vec.size(); ++i)
+    {
+        if ((vec.at(i) ==  side::O))
+        {
+            countO++;
+            if (countO > maxO)
+            {
+                maxO = countO;
+                posO = (i-maxO+1);
+            }  
+        }
+        else 
+        {
+            countO = 0;
+        }
+        
+    }
+    std::cout<<"najdluzszy ciag orlow wynosi " << maxO<<" i jest na pozycji "<<posO<<std::endl;
+
+    for (int i = 0; i < vec.size(); ++i)
+    {
+        if ((vec.at(i) == side::R))
+        {
+            countR++;
+            if (countR > maxR)
+            {
+                maxR = countR;
+                posR = (i - maxR+ 1);
+            }
+        }
+        else
+        {
+            countR = 0;
+        }
+
+    }
+    std::cout << "najdluzszy ciag reszek wynosi " << maxR << " i jest na pozycji " << posR << std::endl;
+}
+
+void Coin::longestStringOR()
+{
+    int count = 1;
+    int max = 0;
+    int pos = 0;
+    for (int i = 1; i < vec.size(); ++i)
+    {
+             
+            if ((vec.at(i-1)) != (vec.at(i)))
+            {
+                count++;
+                if (count > max)
+                {
+                    max = count;
+                    pos = (i - max + 1);
+                }
+            }
+            else
+            {
+                count =1;
+            }
+       
+    }
+    std::cout << "najdluzszy ciag OR wynosi " << max << " i jest na pozycji " << pos << std::endl;
 }
 
 

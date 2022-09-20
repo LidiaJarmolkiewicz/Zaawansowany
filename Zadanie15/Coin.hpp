@@ -9,6 +9,8 @@ public:
 	std::vector<side> vec;
 	side generateThrow();
 	void howManyOR();
+	void statictic();
+	void longestStringOR();
 private:
 	int _howMany;
 };
