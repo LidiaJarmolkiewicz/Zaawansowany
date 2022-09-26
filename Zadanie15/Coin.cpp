@@ -49,8 +49,8 @@ side Coin::generateThrow()
 
 void Coin::howManyOR()
 {
-   double o = count(vec.begin(), vec.end(), side::O);
-   double r = count(vec.begin(), vec.end(), side::R);
+   int o = count(vec.begin(), vec.end(), side::O);
+   int r = count(vec.begin(), vec.end(), side::R);
    double oPercent = o / _howMany * 100;
    double rPercent = r / _howMany * 100;
    std::cout << "liczba orlow = " << o<< " a udzial procentowy wynosi = "<< oPercent<<" %"<<std::endl;
@@ -112,7 +112,7 @@ void Coin::longestStringOR()
     for (int i = 1; i < vec.size(); ++i)
     {
              
-            if ((vec.at(i-1)) != (vec.at(i)))
+            if ((vec.at(i - 1)) != (vec.at(i)))
             {
                 count++;
                 if (count > max)

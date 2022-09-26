@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>D:\SDA\ZAAWANSOWANY\Zadanie15\</FILEPATH>
+      <FILENAME>Coin.cpp</FILENAME>
+      <LINE>54</LINE>
+      <COLUMN>34</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Coin::howManyOR</FUNCTION>
+    <DECORATED>?howManyOR@Coin@@QEAAXXZ</DECORATED>
+    <FUNCLINE>50</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\SDA\ZAAWANSOWANY\Zadanie15\</FILEPATH>
+      <FILENAME>Coin.cpp</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>34</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Coin::howManyOR</FUNCTION>
+    <DECORATED>?howManyOR@Coin@@QEAAXXZ</DECORATED>
+    <FUNCLINE>50</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\SDA\ZAAWANSOWANY\Zadanie15\</FILEPATH>
+      <FILENAME>Coin.cpp</FILENAME>
+      <LINE>115</LINE>
+      <COLUMN>26</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>Coin::longestStringOR</FUNCTION>
+    <DECORATED>?longestStringOR@Coin@@QEAAXXZ</DECORATED>
+    <FUNCLINE>107</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>

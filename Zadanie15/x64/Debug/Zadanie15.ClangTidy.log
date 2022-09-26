@@ -1,0 +1,21 @@
+warning: argument unused during compilation: '/ZI' [clang-diagnostic-unused-command-line-argument]
+D:\SDA\ZAAWANSOWANY\Zadanie15\Coin.cpp:70:24: warning: equality comparison with extraneous parentheses [clang-diagnostic-parentheses-equality]
+        if ((vec.at(i) ==  side::O))
+             ~~~~~~~~~~^~~~~~~~~~~
+D:\SDA\ZAAWANSOWANY\Zadanie15\Coin.cpp:70:24: note: remove extraneous parentheses around the comparison to silence this warning
+        if ((vec.at(i) ==  side::O))
+            ~          ^          ~
+D:\SDA\ZAAWANSOWANY\Zadanie15\Coin.cpp:70:24: note: use '=' to turn this equality comparison into an assignment
+        if ((vec.at(i) ==  side::O))
+                       ^~
+                       =
+D:\SDA\ZAAWANSOWANY\Zadanie15\Coin.cpp:89:24: warning: equality comparison with extraneous parentheses [clang-diagnostic-parentheses-equality]
+        if ((vec.at(i) == side::R))
+             ~~~~~~~~~~^~~~~~~~~~
+D:\SDA\ZAAWANSOWANY\Zadanie15\Coin.cpp:89:24: note: remove extraneous parentheses around the comparison to silence this warning
+        if ((vec.at(i) == side::R))
+            ~          ^         ~
+D:\SDA\ZAAWANSOWANY\Zadanie15\Coin.cpp:89:24: note: use '=' to turn this equality comparison into an assignment
+        if ((vec.at(i) == side::R))
+                       ^~
+                       =
