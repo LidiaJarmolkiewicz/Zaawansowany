@@ -1,2 +1,6 @@
-﻿  BUBBLE.cpp
-  BUBBLE.vcxproj -> D:\SDA\Algorytmy\BubbleSort\x64\Debug\BUBBLE.exe
+﻿  main.cpp
+D:\SDA\ZAAWANSOWANY\BUBBLE\ChangeEUR.hpp(6,25): warning C4584: 'ChangeEUR': base-class 'ChangeA' is already a base-class of 'ChangePLN'
+D:\SDA\ZAAWANSOWANY\BUBBLE\ChangeA.hpp(3): message : see declaration of 'ChangeA'
+D:\SDA\ZAAWANSOWANY\BUBBLE\ChangePLN.hpp(5): message : see declaration of 'ChangePLN'
+  LINK : D:\SDA_ConCurrency\x64\Debug\BUBBLE.exe not found or not built by the last incremental link; performing full link
+  BUBBLE.vcxproj -> D:\SDA_ConCurrency\x64\Debug\BUBBLE.exe
